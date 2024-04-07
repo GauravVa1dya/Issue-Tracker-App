@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .card {
+      background-color: yellow;
+      background-image: url("https://media.istockphoto.com/id/1677846143/photo/time-management-planning.jpg?s=1024x1024&w=is&k=20&c=yORq2bEULjC3DB7ALiZtBdBwBdb9rZ7hQoK1QNzhypE=");
+      color: white;
+      border: 1px solid white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Your HTML code here -->
+  <div class="bg-dark" style="height: 100vh">
+    <div class="bg-dark">
+      <% for( let project of projects ) { %>
+      <div class="card mb-2 w-50 m-auto">
+        <div class="card-header border border-light">
+          <strong> Name of the project : </strong>
+          <%= project.name %>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-white">
+            <strong> Author : </strong>
+            <%= project.author %>
+          </h6>
+          <p class="card-text">
+            <strong> Description : </strong>
+            <%= project.description %>
+          </p>
+
+          <div class="m-auto text-end">
+            <a
+              href="/project/<%=project._id%>"
+              class="btn btn-dark text-light border m-auto"
+              >Open project</a
+            >
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</body>

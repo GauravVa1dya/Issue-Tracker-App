@@ -1,0 +1,14 @@
+<div class="bg-dark" style="height: 100vh">
+  <div class="w-50 border border-secondary border-1 p-3 m-auto bg-dark">
+    <h4 class="display-7 p-3 mb-2 bg-secondary text-white">
+      Project : <%= project.name %>
+    </h4>
+    <h4 class="display-7 p-3 mb-2 bg-success text-dark">
+      Author : <%= project.author %>
+    </h4>
+    <h4 class="display-7 p-3 mb-2 bg-info text-dark">
+      Description : <%= project.description %>
+    </h4>
+  </div>
+  <%-include('./partials/_issues'); %>
+</div>
